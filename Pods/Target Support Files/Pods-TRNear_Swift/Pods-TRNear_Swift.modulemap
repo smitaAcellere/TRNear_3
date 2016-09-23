@@ -1,0 +1,6 @@
+framework module Pods_TRNear_Swift {
+  umbrella header "Pods-TRNear_Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
