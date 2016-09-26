@@ -24,6 +24,11 @@
 		3A356F5F1D880703008F85C7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A356F5E1D880703008F85C7 /* Default-568h@2x.png */; };
 		3A8238BF1D91029C00BFCFC9 /* TraineeWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8238BE1D91029C00BFCFC9 /* TraineeWorkoutsViewController.swift */; };
 		3A8238C11D91276700BFCFC9 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8238C01D91276700BFCFC9 /* WorkoutTableViewCell.swift */; };
+		3A9B8AEB1D95406200F6D498 /* workoutCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B8AEA1D95406200F6D498 /* workoutCustomView.swift */; };
+		3A9B8AED1D95408C00F6D498 /* workoutCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9B8AEC1D95408C00F6D498 /* workoutCustomView.xib */; };
+		3A9B8AEF1D9546CC00F6D498 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B8AEE1D9546CC00F6D498 /* UIViewExtension.swift */; };
+		3A9B8AF41D95551100F6D498 /* favoritesCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9B8AF31D95551100F6D498 /* favoritesCustomView.xib */; };
+		3A9B8AF61D95552D00F6D498 /* favoritesCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B8AF51D95552D00F6D498 /* favoritesCustomView.swift */; };
 		963B14B84C8383625D10BA8B /* Pods_TRNear_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBB86B55EAB82A460CDF169 /* Pods_TRNear_SwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +74,11 @@
 		3A356F5E1D880703008F85C7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3A8238BE1D91029C00BFCFC9 /* TraineeWorkoutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraineeWorkoutsViewController.swift; sourceTree = "<group>"; };
 		3A8238C01D91276700BFCFC9 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		3A9B8AEA1D95406200F6D498 /* workoutCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = workoutCustomView.swift; sourceTree = "<group>"; };
+		3A9B8AEC1D95408C00F6D498 /* workoutCustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = workoutCustomView.xib; sourceTree = "<group>"; };
+		3A9B8AEE1D9546CC00F6D498 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		3A9B8AF31D95551100F6D498 /* favoritesCustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = favoritesCustomView.xib; sourceTree = "<group>"; };
+		3A9B8AF51D95552D00F6D498 /* favoritesCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = favoritesCustomView.swift; sourceTree = "<group>"; };
 		5C34405D8120F36A496CF9D9 /* Pods_TRNear_SwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRNear_SwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DBB86B55EAB82A460CDF169 /* Pods_TRNear_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRNear_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F6AA85CCDD743F56C4FF663 /* Pods-TRNear_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRNear_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRNear_Swift/Pods-TRNear_Swift.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +128,7 @@
 		3A13D4251D89576A0039631E /* Trainee */ = {
 			isa = PBXGroup;
 			children = (
+				3A9B8AF01D9549BE00F6D498 /* CustomViews */,
 				3A13D41C1D8953610039631E /* TraineeDashboardViewController.swift */,
 				3A13D4261D8BCED20039631E /* TraineeHomeViewController.swift */,
 				3A8238BE1D91029C00BFCFC9 /* TraineeWorkoutsViewController.swift */,
@@ -184,6 +195,34 @@
 				3A1A7CEC1D74634E00E5032E /* Info.plist */,
 			);
 			path = TRNear_SwiftUITests;
+			sourceTree = "<group>";
+		};
+		3A9B8AF01D9549BE00F6D498 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				3A9B8AF21D9554F200F6D498 /* favorites_workouts */,
+				3A9B8AF11D9554D700F6D498 /* upcoming_workouts */,
+				3A9B8AEE1D9546CC00F6D498 /* UIViewExtension.swift */,
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
+		3A9B8AF11D9554D700F6D498 /* upcoming_workouts */ = {
+			isa = PBXGroup;
+			children = (
+				3A9B8AEA1D95406200F6D498 /* workoutCustomView.swift */,
+				3A9B8AEC1D95408C00F6D498 /* workoutCustomView.xib */,
+			);
+			name = upcoming_workouts;
+			sourceTree = "<group>";
+		};
+		3A9B8AF21D9554F200F6D498 /* favorites_workouts */ = {
+			isa = PBXGroup;
+			children = (
+				3A9B8AF51D95552D00F6D498 /* favoritesCustomView.swift */,
+				3A9B8AF31D95551100F6D498 /* favoritesCustomView.xib */,
+			);
+			name = favorites_workouts;
 			sourceTree = "<group>";
 		};
 		69FEF53A4247693EB5ACB95E /* Frameworks */ = {
@@ -332,9 +371,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A1A7CD51D74634E00E5032E /* LaunchScreen.storyboard in Resources */,
+				3A9B8AF41D95551100F6D498 /* favoritesCustomView.xib in Resources */,
 				3A356F5F1D880703008F85C7 /* Default-568h@2x.png in Resources */,
 				3A1A7CD21D74634E00E5032E /* Assets.xcassets in Resources */,
 				3A1A7CD01D74634E00E5032E /* Main.storyboard in Resources */,
+				3A9B8AED1D95408C00F6D498 /* workoutCustomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,8 +524,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A356F351D87D28B008F85C7 /* SignupViewController.swift in Sources */,
+				3A9B8AEB1D95406200F6D498 /* workoutCustomView.swift in Sources */,
+				3A9B8AEF1D9546CC00F6D498 /* UIViewExtension.swift in Sources */,
 				3A1A7CCD1D74634E00E5032E /* ViewController.swift in Sources */,
 				3A8238BF1D91029C00BFCFC9 /* TraineeWorkoutsViewController.swift in Sources */,
+				3A9B8AF61D95552D00F6D498 /* favoritesCustomView.swift in Sources */,
 				3A042FA91D92B42100D2C07D /* GlobalVariables.swift in Sources */,
 				3A13D4271D8BCED20039631E /* TraineeHomeViewController.swift in Sources */,
 				3A13D41D1D8953610039631E /* TraineeDashboardViewController.swift in Sources */,
@@ -646,7 +690,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TRNear_Swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acellere.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -669,7 +713,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TRNear_Swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acellere.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
