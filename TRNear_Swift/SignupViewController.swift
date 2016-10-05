@@ -2,35 +2,44 @@
 //  SignupViewController.swift
 //  TRNear_Swift
 //
-//  Created by smita on 13/09/16.
+//  Created by smita on 04/10/16.
 //  Copyright © 2016 Acellere. All rights reserved.
 //
 
 import UIKit
 
 class SignupViewController: UIViewController {
+    
+    var valueToPass = ""
 
+    @IBOutlet weak var selectionLbl: UILabel!
+    @IBOutlet weak var selectionLbl2: UILabel!
+    
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var txtConfirmPassword: UITextField!
+    @IBOutlet weak var txtActivationCode: UITextField!
+    @IBOutlet weak var dividerLbl: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func logInButtonAction(sender: UIButton!) {
         
-        // check here.. User is Trainee or Trainer        
-        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("traineeDashboardViewController") as! TraineeDashboardViewController
-        self.navigationController?.pushViewController(viewController, animated:true)
+        if valueToPass == "Trainee"{
+            txtActivationCode.hidden = true
+            dividerLbl.hidden = true
+        }else{
+            selectionLbl.text = "I'm here to help people get fit."
+            selectionLbl2.text = "Sign up as a personal trainer."
+        }
     }
-    
-    @IBAction func forgotPasswordButtonAction(sender: UIButton!) {
 
-    }
-    
-    @IBAction func backToSignupAction(sender: UIButton!) {
+    @IBAction func backButtonAction(sender: UIButton) {
         self.navigationController?.popViewControllerAnimated(true)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

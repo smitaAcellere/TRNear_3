@@ -10,4 +10,6 @@ import UIKit
 
 class favoritesCustomView: UIView {
 
+    @IBOutlet weak var baseBackView: UIView!
+    @IBOutlet weak var favoriteButton: UIButton!
 }

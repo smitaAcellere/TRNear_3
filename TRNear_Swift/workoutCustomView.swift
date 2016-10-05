@@ -8,7 +8,7 @@
 
 import UIKit
 
-class workoutCustomView: UIView {
+@IBDesignable class workoutCustomView: UIView {
 
     @IBOutlet weak var backgroundImageView: UIImageView!
 }

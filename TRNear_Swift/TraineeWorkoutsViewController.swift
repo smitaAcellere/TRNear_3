@@ -25,11 +25,11 @@ class TraineeWorkoutsViewController: UIViewController,UITableViewDelegate,UITabl
 
         // Do any additional setup after loading the view.
         
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+
         workoutTableView.delegate = self
         workoutTableView.dataSource = self
         workoutTableView.tag = 100
-        
-        upcomingButton.titleLabel!.font =  UIFont.boldSystemFontOfSize(18)
     }
     
     @IBAction func upcomingButtonAction(sender: UIButton!) {
@@ -41,13 +41,14 @@ class TraineeWorkoutsViewController: UIViewController,UITableViewDelegate,UITabl
         workoutTableView.tag = 100
         workoutTableView.reloadData()
         
-        upcomingButton.titleLabel?.textColor = UIColor.blackColor()
+//        upcomingButton.titleLabel?.textColor = UIColor.blackColor()
+        upcomingButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         upcomingButton.titleLabel!.font =  UIFont.boldSystemFontOfSize(18)
 
-        favoriteButton.titleLabel?.textColor = GlobalVariables.Colors.border_light
+        favoriteButton.setTitleColor(GlobalVariables.Colors.border_light, forState: UIControlState.Normal)
         favoriteButton.titleLabel!.font =  UIFont(name: "Helvetica", size: 18)
 
-        pastButton.titleLabel?.textColor = GlobalVariables.Colors.border_light
+        pastButton.setTitleColor(GlobalVariables.Colors.border_light, forState: UIControlState.Normal)
         pastButton.titleLabel!.font =  UIFont(name: "Helvetica", size: 18)
 
 
@@ -59,16 +60,16 @@ class TraineeWorkoutsViewController: UIViewController,UITableViewDelegate,UITabl
         favoriteFlag = true
         pastFlag = false
         
-        workoutTableView.tag = 1
+        workoutTableView.tag = 300
         workoutTableView.reloadData()
         
-        upcomingButton.titleLabel?.textColor = GlobalVariables.Colors.border_light
+        upcomingButton.setTitleColor(GlobalVariables.Colors.border_light, forState: UIControlState.Normal)
         upcomingButton.titleLabel!.font =  UIFont(name: "Helvetica", size: 18)
 
-        favoriteButton.titleLabel?.textColor = UIColor.blackColor()
+        favoriteButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         favoriteButton.titleLabel!.font =  UIFont.boldSystemFontOfSize(18)
 
-        pastButton.titleLabel?.textColor = GlobalVariables.Colors.border_light
+        pastButton.setTitleColor(GlobalVariables.Colors.border_light, forState: UIControlState.Normal)
         pastButton.titleLabel!.font =  UIFont(name: "Helvetica", size: 18)
 
         
@@ -83,13 +84,13 @@ class TraineeWorkoutsViewController: UIViewController,UITableViewDelegate,UITabl
         workoutTableView.tag = 200
         workoutTableView.reloadData()
         
-        upcomingButton.titleLabel?.textColor = GlobalVariables.Colors.border_light
+        upcomingButton.setTitleColor(GlobalVariables.Colors.border_light, forState: UIControlState.Normal)
         upcomingButton.titleLabel!.font =  UIFont(name: "Helvetica", size: 18)
 
-        favoriteButton.titleLabel?.textColor = GlobalVariables.Colors.border_light
+        favoriteButton.setTitleColor(GlobalVariables.Colors.border_light, forState: UIControlState.Normal)
         favoriteButton.titleLabel!.font =  UIFont(name: "Helvetica", size: 18)
 
-        pastButton.titleLabel?.textColor = UIColor.blackColor()
+        pastButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         pastButton.titleLabel!.font =  UIFont.boldSystemFontOfSize(18)
 
     }
@@ -102,24 +103,57 @@ class TraineeWorkoutsViewController: UIViewController,UITableViewDelegate,UITabl
             return 2
         }else if self.workoutTableView.tag == 200{
             return 5
+        }else if self.workoutTableView.tag == 300{
+            return 3
         }else{
             return 0
         }
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100
+        
+        if self.workoutTableView.tag == 300
+        {
+            return 335
+        }else{
+            return 100
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell:UITableViewCell = self.workoutTableView.dequeueReusableCellWithIdentifier("CellIdentifier") as! WorkoutTableViewCell
+        let cell:UITableViewCell
+        
+        if self.workoutTableView.tag == 300
+        {
+            cell = self.workoutTableView.dequeueReusableCellWithIdentifier("favoriteCellIdentifier") as! WorkoutTableViewCell
+            
+            let infoViewPos = UIView.viewFromNibName("favoritesCustomView") as? favoritesCustomView
+            infoViewPos?.frame = CGRect(x: 20, y: 20, width: cell.contentView.frame.width-40, height: cell.contentView.frame.height-20)
+            infoViewPos?.baseBackView.layer.borderColor = GlobalVariables.Colors.border_light.CGColor
+            infoViewPos?.layer.borderWidth = 1.0
+            infoViewPos?.layer.borderColor = GlobalVariables.Colors.border_light.CGColor
+            infoViewPos?.baseBackView.layer.borderWidth = 1.0
+                        
+            cell.contentView.addSubview(infoViewPos!)
+            
+        }else{
+            cell = self.workoutTableView.dequeueReusableCellWithIdentifier("CellIdentifier") as! WorkoutTableViewCell
+        }
         
         return cell
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         
+        if self.workoutTableView.tag == 300
+        {
+            
+        }else{
+        
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("workoutDetailsVC") as! WorkoutDetailsViewController
+            self.navigationController?.pushViewController(viewController, animated:true)
+        }
     }
 
     override func didReceiveMemoryWarning() {
