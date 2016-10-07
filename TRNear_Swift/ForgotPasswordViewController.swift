@@ -8,33 +8,50 @@
 
 import UIKit
 
-class ForgotPasswordViewController: UIViewController {
+class ForgotPasswordViewController: UIViewController,UITextFieldDelegate {
 
-    @IBOutlet weak var resetPasswordBtn: UIButton!
+    @IBOutlet weak var txtEmail: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        resetPasswordBtn.layer.borderColor = GlobalVariables.Colors.border_light.CGColor
-        resetPasswordBtn.layer.borderWidth = 1
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
+        
+        self.txtEmail.delegate = self
     }
     
-    @IBAction func resetPasswordBtnAction(sender: UIButton!) {
-        
-    }
-
     @IBAction func backButtonAction(sender: UIButton!) {
         
         self.navigationController?.popViewControllerAnimated(true)
 
     }
+    
+    // MARK: - UITextFieldDelegate
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.txtEmail.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

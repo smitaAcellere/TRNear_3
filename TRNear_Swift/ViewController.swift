@@ -7,103 +7,63 @@
 //
 
 import UIKit
-import FBSDKCoreKit
-import FBSDKLoginKit
 
-import GoogleSignIn
-import GGLSignIn
-
-class ViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegate {
-
-    @IBOutlet weak var adidasImageView : UIImageView!
+class ViewController: UIViewController{
     
+    @IBOutlet weak var trainerButtonAction: UIButton!
+    @IBOutlet weak var traineeButtonAction: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationController?.navigationBarHidden = true;
         
+//        let mask = CAShapeLayer()
+//        mask.frame = trainerView.layer.bounds
+//        
+//        let width = trainerView.layer.frame.size.width
+//        let height = trainerView.layer.frame.size.height
+//        
+//        let path = CGPathCreateMutable()
+//        
+//        CGPathMoveToPoint(path, nil, 0, height)
+//        CGPathAddLineToPoint(path, nil, width, height/2)
+//        CGPathAddLineToPoint(path, nil, width, 0)
+//        CGPathAddLineToPoint(path, nil, 0, 0)
+//
+//        mask.path = path
+//        trainerView.layer.mask = mask
+//        
+//        trainerView.clipsToBounds = true
+//        
+//        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(self.buttonAction(_:)))
+//        
+//        trainerView.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    override func viewDidAppear(animated: Bool) {
-        GIDSignIn.sharedInstance().uiDelegate = self
+    @IBAction func trainerButtonAction(sender: UIButton) {
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("signupEmailVC") as! SignupWithEmailViewController
+        viewController.userType = ""
+        self.navigationController?.pushViewController(viewController, animated:true)
     }
     
-
-    @IBAction func facebookButtonAction(sender: UIButton!) {
-        
-        let facebookLogin = FBSDKLoginManager()
-        
-        facebookLogin.logOut()
-        facebookLogin.logInWithReadPermissions(["public_profile", "email", "user_friends"], fromViewController: self, handler: {(facebookResult, facebookError) -> Void in
-            if facebookError != nil {
-                print("Facebook login failed. Error(facebookError)")
-            } else if (facebookResult?.isCancelled)! {
-                print("Facebook login was cancelled.")
-            } else {
-                self.returnUserData();
-            }
-        })
+    @IBAction func traineeButtonAction(sender: UIButton) {
+        selectUser("Trainee",loginMode : "Signup")
     }
     
-    func returnUserData()
-    {
-        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"id,interested_in,gender,birthday,email,age_range,name,picture.width(480).height(480)"])
-        
-        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
-            
-            if ((error) != nil)
-            {
-                // Process error
-                print("Error: \(error)")
-            }
-            else
-            {
-                print("fetched user: \(result)")
-                let id : NSString = result.valueForKey("id") as! String
-                print("User ID is: \(id)")
-            }
-        })
+    @IBAction func loginbuttonAction(sender: UIButton) {
+        selectUser("",loginMode : "Login")
     }
     
-    @IBAction func googleButtonAction(sender: UIButton!) {
-        print("Button tapped", terminator: "")
+    func selectUser(userType: String, loginMode: String) {
         
-        GIDSignIn.sharedInstance().signIn()
-        
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("signupVC") as! SignupViewController
+        viewController.userType = userType
+        viewController.loginMode = loginMode
+        self.navigationController?.pushViewController(viewController, animated:true)
     }
     
-    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
-                withError error: NSError!) {
-        if (error == nil) {
-            // Perform any operations on signed in user here.
-            let userId = user.userID                  // For client-side use only!
-            let idToken = user.authentication.idToken // Safe to send to the server
-            let fullName = user.profile.name
-            let givenName = user.profile.givenName
-            let familyName = user.profile.familyName
-            let email = user.profile.email
-            
-            print(userId, terminator: "")
-            print(idToken, terminator: "")
-            print(fullName, terminator: "")
-            print(givenName, terminator: "")
-            print(familyName, terminator: "")
-            print(email, terminator: "")
-            
-            signIn.signOut()
-            
-        } else {
-            print("\(error.localizedDescription)", terminator: "")
-        }
-    }
-    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
-                withError error: NSError!) {
-        // Perform any operations when the user disconnects from app here.
-        // ...
-    }
-
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

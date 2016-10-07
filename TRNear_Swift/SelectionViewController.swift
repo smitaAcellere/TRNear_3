@@ -29,7 +29,7 @@ class SelectionViewController: UIViewController {
     
     func selectUser(valueToPass: String) {
         let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("signupVC") as! SignupViewController
-        viewController.valueToPass = valueToPass
+//        viewController.valueToPass = valueToPass
         self.navigationController?.pushViewController(viewController, animated:true)
     }
     

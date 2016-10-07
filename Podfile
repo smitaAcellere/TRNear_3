@@ -1,5 +1,5 @@
 # Uncomment this line to define a global platform for your project
-platform :ios, '9.0'
+platform :ios, ‘9.0’
 
 target 'TRNear_Swift' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
@@ -29,6 +29,9 @@ target 'TRNear_Swift' do
 
 	pod 'JTAppleCalendar'
 	use_frameworks!
+
+	pod 'SkyFloatingLabelTextField', '~> 1.0'
+pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git', :branch => 'swift2.3'
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|

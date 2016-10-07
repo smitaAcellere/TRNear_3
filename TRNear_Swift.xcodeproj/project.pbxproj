@@ -44,6 +44,7 @@
 		3A9B8AFE1D9D1FF800F6D498 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9B8AFD1D9D1FF700F6D498 /* HeaderView.xib */; };
 		3A9B8B001D9D330F00F6D498 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B8AFF1D9D330E00F6D498 /* HeaderView.swift */; };
 		3AD3885F1DA3C12100347109 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3885E1DA3C12100347109 /* SignupViewController.swift */; };
+		3AD388611DA6482E00347109 /* SignupWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD388601DA6482D00347109 /* SignupWithEmailViewController.swift */; };
 		963B14B84C8383625D10BA8B /* Pods_TRNear_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBB86B55EAB82A460CDF169 /* Pods_TRNear_SwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		3A9B8AFD1D9D1FF700F6D498 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		3A9B8AFF1D9D330E00F6D498 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		3AD3885E1DA3C12100347109 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		3AD388601DA6482D00347109 /* SignupWithEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupWithEmailViewController.swift; sourceTree = "<group>"; };
 		5C34405D8120F36A496CF9D9 /* Pods_TRNear_SwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRNear_SwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DBB86B55EAB82A460CDF169 /* Pods_TRNear_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRNear_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F6AA85CCDD743F56C4FF663 /* Pods-TRNear_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRNear_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRNear_Swift/Pods-TRNear_Swift.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,9 +203,10 @@
 				3A1A7CF81D757E3300E5032E /* TRNear_Swift.entitlements */,
 				3A1A7CCA1D74634E00E5032E /* AppDelegate.swift */,
 				3A1A7CCC1D74634E00E5032E /* ViewController.swift */,
-				3A700B781DA3749600B3179B /* SelectionViewController.swift */,
 				3AD3885E1DA3C12100347109 /* SignupViewController.swift */,
 				3A356F341D87D28B008F85C7 /* LoginViewController.swift */,
+				3AD388601DA6482D00347109 /* SignupWithEmailViewController.swift */,
+				3A700B781DA3749600B3179B /* SelectionViewController.swift */,
 				3A700B761DA28D7B00B3179B /* ForgotPasswordViewController.swift */,
 				3A1A7CCE1D74634E00E5032E /* Main.storyboard */,
 				3A1A7CD11D74634E00E5032E /* Assets.xcassets */,
@@ -354,6 +357,7 @@
 				3A1A7CE31D74634E00E5032E /* Frameworks */,
 				3A1A7CE41D74634E00E5032E /* Resources */,
 				39016A843A6F2934611741A6 /* [CP] Copy Pods Resources */,
+				74B7A94CBEFEAB8475A4F9B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -480,7 +484,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		74B7A94CBEFEAB8475A4F9B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TRNear_SwiftUITests/Pods-TRNear_SwiftUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		97160C0CB6B5BCD80BE1794A /* [CP] Copy Pods Resources */ = {
@@ -540,7 +559,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D829DF9AAB4364363270AE35 /* [CP] Check Pods Manifest.lock */ = {
@@ -555,7 +574,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F403B8AF4B12673BDE814F2D /* [CP] Embed Pods Frameworks */ = {
@@ -603,6 +622,7 @@
 				3A8238C11D91276700BFCFC9 /* WorkoutTableViewCell.swift in Sources */,
 				3AD3885F1DA3C12100347109 /* SignupViewController.swift in Sources */,
 				3A13D4231D8953B30039631E /* TrainerDashboardViewController.swift in Sources */,
+				3AD388611DA6482E00347109 /* SignupWithEmailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
