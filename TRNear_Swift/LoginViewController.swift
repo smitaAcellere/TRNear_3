@@ -46,23 +46,44 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func logInButtonAction(sender: UIButton!) {
         
-//        getData("http://trnear.in/api/user/signup", parameters: "",completionHandler: {(responseData,error)->()in
-//            
-//            if error.code == 200{
-//                // Successful
-//                print("responseData ::: ", responseData)
-//                
-//                // check.. User is Trainee or Trainer
-//                let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("traineeDashboardViewController") as! TraineeDashboardViewController
-//                self.navigationController?.pushViewController(viewController, animated:true)
-//                
-//            }else{
-//                // Error
-//            }
-//        
-//        })
+        let emailText = txtEmail.text
+        let passwordText = txtPassword.text
         
-        
+        if (emailText?.characters.count)! == 0 || (passwordText?.characters.count)! == 0{
+            
+            var error_message = ""
+            if emailText == "" && passwordText == ""{
+                error_message = "Please enter all the fields."
+            }else if emailText == ""{
+                error_message = "Please enter Email ID!"
+            }else if passwordText == ""{
+                error_message = "Please enter Password!"
+            }
+            alertView("Warning", message: error_message)
+            
+        }else if isValidEmail(emailText!) == false{
+            alertView("Warning", message: "Please enter valid email address!")
+        }else if passwordText?.characters.count <= 6 || passwordText?.characters.count >= 15{
+            alertView("Warning", message: "Password should be minimum 6 and maximum 15 characters!")
+        }else{
+            
+            /*
+            getData("http://trnear.in/api/user/signup", parameters: "",completionHandler: {(responseData,error)->()in
+                
+                if error.code == 200{
+                    // Successful
+                    print("responseData ::: ", responseData)
+                    
+                    // check.. User is Trainee or Trainer
+                    let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("traineeDashboardViewController") as! TraineeDashboardViewController
+                    self.navigationController?.pushViewController(viewController, animated:true)
+                    
+                }else{
+                    // Error
+                }
+                
+            })*/
+        }
     }
     
     @IBAction func forgotPasswordButtonAction(sender: UIButton!) {

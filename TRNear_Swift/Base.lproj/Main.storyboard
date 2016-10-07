@@ -1473,6 +1473,9 @@ If you are interested in joining our beta release please head over to www.trnear
                                     <constraint firstAttribute="height" constant="42" id="LwD-p0-6Fp"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="email_me_and_reset_my_password"/>
+                                <connections>
+                                    <action selector="forgotPasswordButtonAction:" destination="qpv-pX-UIC" eventType="touchUpInside" id="mSn-Hy-fuO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

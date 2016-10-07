@@ -67,31 +67,59 @@ class SignupWithEmailViewController: UIViewController, UITextFieldDelegate{
     }
     @IBAction func signupButtonAction(sender: UIButton) {
         
-        let parameters: [String: AnyObject] = [
-            "email":txtEmail.text!,
-            "password":txtPassword.text!
-        ]
+        let emailText = txtEmail.text
+        let passwordText = txtPassword.text
+        let confirmPasswordText = txtConfirmPassword.text
+        let activationCodeText = txtActivationCode.text
         
-        getData("http://trnear.in/api/user/signup", parameters: parameters,completionHandler: {(responseData,error)->()in
+        if (emailText?.characters.count)! == 0 || (passwordText?.characters.count)! == 0 || (confirmPasswordText?.characters.count)! == 0{
             
-            if error.code == 200{
-                // Successful
-                print("responseData ::: ", responseData)
-                if self.userType == "Trainee"{// Trainee
-                    let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("traineeDashboardViewController") as! TraineeDashboardViewController
-                    self.navigationController?.pushViewController(viewController, animated:true)
-                }else{// Trainer
+            var error_message = ""
+            if emailText == "" && passwordText == "" && confirmPasswordText == ""{
+                error_message = "Please enter all the fields."
+            }else if passwordText == ""{
+                error_message = "Please enter Password!"
+            }else if confirmPasswordText == ""{
+                error_message = "Please enter Confirm Password!"
+            }
+            alertView("Warning", message: error_message)
+            
+        }else if passwordText != confirmPasswordText{
+            alertView("Warning", message: "Password and Confirm Password should be same!")
+        }else if (userType != "Trainee") && (activationCodeText?.characters.count)! == 0{
+            alertView("Warning", message: "Please enter Activation code!")
+        }else if passwordText?.characters.count <= 6 || passwordText?.characters.count >= 15{
+            alertView("Warning", message: "Password should be minimum 6 and maximum 15 characters!")
+        }else if confirmPasswordText?.characters.count <= 6 || confirmPasswordText?.characters.count >= 15{
+            alertView("Warning", message: "Confirm Password should be minimum 6 and maximum 15 characters!")
+        }else if isValidEmail(emailText!) == false{
+            alertView("Warning", message: "Please enter valid email address!")
+        }else{
+            let parameters: [String: AnyObject] = [
+                "email":txtEmail.text!,
+                "password":txtPassword.text!
+            ]
+            
+            getData("http://trnear.in/api/user/signup", parameters: parameters,completionHandler: {(responseData,error)->()in
+                
+                if error.code == 200{
+                    // Successful
+                    print("responseData ::: ", responseData)
+                    if self.userType == "Trainee"{// Trainee
+                        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("traineeDashboardViewController") as! TraineeDashboardViewController
+                        self.navigationController?.pushViewController(viewController, animated:true)
+                    }else{// Trainer
+                        
+                    }
+                }else{
+                    // Error
+                    print("Error ::: ", error)
                     
                 }
                 
-                
-            }else{
-                // Error
-                print("Error ::: ", error)
-
-            }
+            })
             
-        })
+        }
     }
     
     @IBAction func backButtonAction(sender: UIButton) {

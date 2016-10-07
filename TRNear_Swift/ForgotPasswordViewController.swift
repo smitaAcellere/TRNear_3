@@ -22,6 +22,25 @@ class ForgotPasswordViewController: UIViewController,UITextFieldDelegate {
         self.txtEmail.delegate = self
     }
     
+    @IBAction func forgotPasswordButtonAction(sender: UIButton) {
+        
+        let emailText = txtEmail.text
+        
+        if (emailText?.characters.count)! == 0{
+            
+            var error_message = ""
+            if emailText == ""{
+                error_message = "Please enter Email ID!"
+            }
+            alertView("Warning", message: error_message)
+            
+        }else if isValidEmail(emailText!) == false{
+            alertView("Warning", message: "Please enter valid email address!")
+        }else{
+            
+        }
+    }
+    
     @IBAction func backButtonAction(sender: UIButton!) {
         
         self.navigationController?.popViewControllerAnimated(true)
