@@ -1,0 +1,138 @@
+
+/* resets */
+html, body
+{
+	padding:0;
+	margin:0;
+	border:0;
+	height: 100%;
+	font-size:16px;
+}
+
+html
+{
+	font-size: 100%;
+}
+
+h1, h2, h3, p
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	font-family: "skolar-sans-latin";
+	background: url(../img/trnear_main_bkgd_01.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#main-container
+{
+	height: 100%;
+}
+
+/* nav styles */
+.navbar-nav
+{
+	margin: 15px 0;
+}
+
+.navbar-nav>li
+{
+	display: inline-block;
+}
+
+.nav>li>a:hover, .nav>li>a:focus
+{
+    background: none;
+}
+
+.navbar-brand
+{
+	height: auto;
+}
+
+.navbar-brand img
+{
+	width: 6em;
+}
+
+main
+{
+	height: calc(100% - 90px);
+	margin-top: 90px;
+}
+
+.centered-container
+{
+	position: relative;
+	max-width: 40em;
+	margin: 0 auto;
+	margin-bottom: 1.5em;
+}
+
+.centered-container .bkgd-container
+{
+	position: absolute;
+	background-color: rgba(65, 152, 192, .6);
+	height: 100%;
+	width: 100%;
+}
+
+#cta-block
+{
+	text-align: center;
+	padding: 1em;
+	position: relative;
+}
+
+#cta-block h1
+{
+	color: white;
+	font-size: 3em;
+	text-transform: uppercase;
+	font-weight: 900;
+	margin-bottom: .5em;
+	letter-spacing: .03em;
+}
+
+#cta-block hr
+{
+	max-width: 10em;
+}
+
+#cta-block p
+{
+	color: white;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.8em;
+    max-width: 30em;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+#cta-block .form-control
+{
+	height: 45px;
+}
+
+#submit-email-button
+{
+	background-color: #212123;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.form-group .has-error .help-block{
+    color:#fff;
+}
+
+.form-group .has-error .form-control{
+    border-color:#fff;
+}

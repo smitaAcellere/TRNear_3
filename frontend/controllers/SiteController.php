@@ -12,6 +12,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\SubscriptionForm;
 
 /**
  * Site controller
@@ -72,7 +73,17 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $model = new SubscriptionForm();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user = $model->subscribe()) {
+                return $this->goHome();
+            }
+        }
+
+        return $this->render('newsletter', [
+            'model' => $model,
+        ]);
+        //return $this->render('index');
     }
 
     /**

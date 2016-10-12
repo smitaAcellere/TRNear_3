@@ -1,0 +1,24 @@
+
+@media (min-width: 30em) {
+	#cta-block
+	{
+		padding: 3em;
+	}
+
+	.navbar-nav>li>a 
+	{
+		padding-top: 15px;
+	}
+	.navbar-brand img
+	{
+		width: auto;
+	}
+}
+
+@media (min-height: 500px) {
+	.centered-container
+	{
+		top: calc(50% - 45px);
+		transform: translateY(-50%);
+	}
+}
