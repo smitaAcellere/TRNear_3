@@ -78,7 +78,7 @@ public class JTAppleCalendarView: UIView {
     /// Enables and disables animations when scrolling to and from date-cells
     public var animationsEnabled = true
     /// The scroll direction of the sections in JTAppleCalendar.
-    public var direction : UICollectionViewScrollDirection = .Vertical {
+    public var direction : UICollectionViewScrollDirection = .Horizontal {
         didSet {
             if oldValue == direction { return }
             let layout = generateNewLayout()
@@ -198,37 +198,13 @@ public class JTAppleCalendarView: UIView {
     public var cellInset: CGPoint = CGPoint(x: 3, y: 3)
     var cellViewSource: JTAppleCalendarViewSource!
     var registeredHeaderViews: [JTAppleCalendarViewSource] = []
-    
-    
-    @available(*, deprecated=4.1.5, renamed="scrollingMode = .NonStopToSection(withResistance: <#CGFloat#>)")
-    /// Enable or disable paging when the calendar view is scrolled
-    public var pagingEnabled: Bool = true {
-        didSet {
-            if pagingEnabled == true {
-                self.scrollingMode = .StopAtEachCalendarFrameWidth
-            } else {
-                self.scrollingMode = .NonStopToCell(withResistance: 0.75)
-            }
-        }
-    }
-    /// Enable or disable snapping to cells when the calendar view is scrolled
-    @available(*, deprecated=4.1.5, renamed="calendarView.scrollingMode = NonStopToCell(withResistance: <#CGFloat#>)")
-    public var cellSnapsToEdge: Bool = false {
-        didSet {
-            if cellSnapsToEdge == true {
-                self.scrollingMode = .NonStopToCell(withResistance: 0.75)
-            } else {
-                self.scrollingMode = .StopAtEachCalendarFrameWidth
-            }
-        }
-    }
-    
-    
+
     /// Enable or disable swipe scrolling of the calendar with this variable
     public var scrollEnabled: Bool = true {
         didSet { calendarView.scrollEnabled = scrollEnabled }
     }
-        
+    
+    // Configure the scrolling behavior
     public var scrollingMode: ScrollingMode = .StopAtEachCalendarFrameWidth {
         didSet {
             switch scrollingMode {
@@ -250,10 +226,6 @@ public class JTAppleCalendarView: UIView {
             #endif
         }
     }
-    
-    /// This is only applicable when calendar view paging is not enabled. Use this variable to decelerate the scroll movement to make it more 'sticky' or more fluid scrolling
-    @available(*, deprecated=4.1.5, message="This variable does nothing.")
-    public var scrollResistance: CGFloat = 0.75
     
     lazy var calendarView : UICollectionView = {
         
@@ -380,9 +352,16 @@ public class JTAppleCalendarView: UIView {
         // If the scroll is set to animate, and the target content offset is already on the screen, then the didFinishScrollingAnimation
         // delegate will not get called. Once animation is on let's force a scroll so the delegate MUST get caalled
         if let attributes = self.calendarView.layoutAttributesForItemAtIndexPath(indexPath) {
-            let origin = attributes.frame.origin
-            let offset = direction == .Horizontal ? origin.x : origin.y
-            if  self.calendarView.contentOffset.x == offset || (scrollingMode.pagingIsEnabled() && (indexPath.section ==  currentSectionPage)) {
+            let layoutOffset: CGFloat
+            let calendarOffset: CGFloat
+            if direction == .Horizontal {
+                layoutOffset = attributes.frame.origin.x
+                calendarOffset = calendarView.contentOffset.x
+            } else {
+                layoutOffset = attributes.frame.origin.y
+                calendarOffset = calendarView.contentOffset.y
+            }
+            if  calendarOffset == layoutOffset || (scrollingMode.pagingIsEnabled() && (indexPath.section ==  currentSectionPage)) {
                 retval = true
             } else {
                 retval = false

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="g7B-Lk-3LL" customClass="CalenderCellView" customModule="TRNear_Swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kH-oh-KIp" customClass="AnimationView" customModule="TRNear_Swift" customModuleProvider="target">
+                    <rect key="frame" x="10" y="10" width="80" height="80"/>
+                    <color key="backgroundColor" red="0.91764705879999997" green="0.63529411759999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Kkl-lx-uPZ"/>
+                        <constraint firstAttribute="width" constant="20" id="hJ5-VC-U12"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Kkl-lx-uPZ"/>
+                            <exclude reference="hJ5-VC-U12"/>
+                        </mask>
+                    </variation>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edF-1Q-ROC">
+                    <rect key="frame" x="44" y="38" width="12" height="24"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="edF-1Q-ROC" firstAttribute="centerY" secondItem="g7B-Lk-3LL" secondAttribute="centerY" id="Dic-HW-tap"/>
+                <constraint firstItem="1kH-oh-KIp" firstAttribute="centerY" secondItem="g7B-Lk-3LL" secondAttribute="centerY" id="Ias-CO-M5A"/>
+                <constraint firstItem="edF-1Q-ROC" firstAttribute="centerX" secondItem="g7B-Lk-3LL" secondAttribute="centerX" id="YY4-Sd-tXN"/>
+                <constraint firstItem="1kH-oh-KIp" firstAttribute="width" secondItem="g7B-Lk-3LL" secondAttribute="height" multiplier="0.7" constant="10" id="fFD-g9-mi0"/>
+                <constraint firstItem="1kH-oh-KIp" firstAttribute="centerX" secondItem="g7B-Lk-3LL" secondAttribute="centerX" id="lrb-dI-pdP"/>
+                <constraint firstItem="1kH-oh-KIp" firstAttribute="height" secondItem="g7B-Lk-3LL" secondAttribute="height" multiplier="0.7" constant="10" id="rhz-16-xQy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                    <color key="value" red="0.3294117647" green="0.78039215689999997" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="normalDayColor">
+                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="dayLabel" destination="edF-1Q-ROC" id="0Qx-og-zyf"/>
+                <outlet property="selectedView" destination="1kH-oh-KIp" id="bXS-hu-jXM"/>
+            </connections>
+            <point key="canvasLocation" x="-246.5" y="445"/>
+        </view>
+    </objects>
+</document>

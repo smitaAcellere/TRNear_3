@@ -27,8 +27,8 @@ target 'TRNear_Swift' do
 
     pod 'Firebase/Core'
 
-	pod 'JTAppleCalendar'
-	use_frameworks!
+    pod ‘JTAppleCalendar’
+
 
 	pod 'SkyFloatingLabelTextField', '~> 1.0'
 pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git', :branch => 'swift2.3'

@@ -55,16 +55,13 @@ class SignupWithEmailViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func infoButtonAction(sender: UIButton) {
-        
-//        activationCodeDetailsView.hidden = false
-//        signupButton.enabled = false
+        activationCodeDetailsView.hidden = false
     }
     
     @IBAction func closeButtonAction(sender: UIButton) {
         activationCodeDetailsView.hidden = true
-        signupButton.enabled = true
-
     }
+    
     @IBAction func signupButtonAction(sender: UIButton) {
         
         let emailText = txtEmail.text
@@ -95,12 +92,16 @@ class SignupWithEmailViewController: UIViewController, UITextFieldDelegate{
         }else if isValidEmail(emailText!) == false{
             alertView("Warning", message: "Please enter valid email address!")
         }else{
+            
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("traineeDashboardViewController") as! TraineeDashboardViewController
+            self.navigationController?.pushViewController(viewController, animated:true)
+            /*
             let parameters: [String: AnyObject] = [
                 "email":txtEmail.text!,
                 "password":txtPassword.text!
             ]
             
-            getData("http://trnear.in/api/user/signup", parameters: parameters,completionHandler: {(responseData,error)->()in
+            postData("http://trnear.in/api/user/signup", parameters: parameters,completionHandler: {(responseData,error)->()in
                 
                 if error.code == 200{
                     // Successful
@@ -117,7 +118,7 @@ class SignupWithEmailViewController: UIViewController, UITextFieldDelegate{
                     
                 }
                 
-            })
+            })*/
             
         }
     }

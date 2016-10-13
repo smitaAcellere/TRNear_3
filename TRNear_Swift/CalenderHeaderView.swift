@@ -1,5 +1,5 @@
 //
-//  WhiteSectionHeaderView.swift
+//  CalenderHeaderView.swift
 //  JTAppleCalendar
 //
 //  Created by JayT on 2016-05-16.
@@ -7,6 +7,6 @@
 //
 import JTAppleCalendar
 
-class WhiteSectionHeaderView: JTAppleHeaderView {
+class CalenderHeaderView: JTAppleHeaderView {
     @IBOutlet weak var title: UILabel!
 }

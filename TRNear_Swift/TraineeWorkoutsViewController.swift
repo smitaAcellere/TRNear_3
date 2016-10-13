@@ -32,6 +32,14 @@ class TraineeWorkoutsViewController: UIViewController,UITableViewDelegate,UITabl
         workoutTableView.tag = 100
     }
     
+    @IBAction func calenderBarButtonAction(sender: UIBarButtonItem) {
+        
+//        let calendarPicker = EPCalendarPicker(startYear: 2016, endYear: 2016, multiSelection: true, selectedDates: nil)
+//        calendarPicker.calendarDelegate = self
+//        self.navigationController?.pushViewController(calendarPicker, animated: true)
+        
+    }
+    
     @IBAction func upcomingButtonAction(sender: UIButton!) {
         
         upcomingFlag = true
@@ -134,7 +142,7 @@ class TraineeWorkoutsViewController: UIViewController,UITableViewDelegate,UITabl
             infoViewPos?.layer.borderWidth = 1.0
             infoViewPos?.layer.borderColor = GlobalVariables.Colors.border_light.CGColor
             infoViewPos?.baseBackView.layer.borderWidth = 1.0
-                        
+            
             cell.contentView.addSubview(infoViewPos!)
             
         }else{

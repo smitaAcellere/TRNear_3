@@ -24,13 +24,16 @@
 		3A356F5F1D880703008F85C7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A356F5E1D880703008F85C7 /* Default-568h@2x.png */; };
 		3A700B681D9E845E00B3179B /* CreateNewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A700B671D9E845E00B3179B /* CreateNewWorkoutViewController.swift */; };
 		3A700B6B1D9E8E4200B3179B /* WorkoutDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A700B6A1D9E8E4200B3179B /* WorkoutDetailsViewController.swift */; };
-		3A700B6E1DA2313000B3179B /* PinkSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A700B6C1DA2313000B3179B /* PinkSectionHeaderView.swift */; };
-		3A700B6F1DA2313000B3179B /* PinkSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A700B6D1DA2313000B3179B /* PinkSectionHeaderView.xib */; };
-		3A700B721DA2313900B3179B /* WhiteSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A700B701DA2313900B3179B /* WhiteSectionHeaderView.swift */; };
-		3A700B731DA2313900B3179B /* WhiteSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A700B711DA2313900B3179B /* WhiteSectionHeaderView.xib */; };
-		3A700B751DA2379100B3179B /* AnimationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A700B741DA2379100B3179B /* AnimationClass.swift */; };
 		3A700B771DA28D7B00B3179B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A700B761DA28D7B00B3179B /* ForgotPasswordViewController.swift */; };
-		3A700B791DA3749600B3179B /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A700B781DA3749600B3179B /* SelectionViewController.swift */; };
+		3A753C6C1DAE2C6200E50937 /* AnimationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A753C6B1DAE2C6200E50937 /* AnimationClass.swift */; };
+		3A753C6F1DAE3D8500E50937 /* CalenderHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A753C6D1DAE3D8500E50937 /* CalenderHeaderView.swift */; };
+		3A753C701DAE3D8500E50937 /* CalenderHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A753C6E1DAE3D8500E50937 /* CalenderHeaderView.xib */; };
+		3A753C721DAE696F00E50937 /* MessengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A753C711DAE696F00E50937 /* MessengerViewController.swift */; };
+		3A753C741DAF7CEB00E50937 /* MessagesRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A753C731DAF7CEB00E50937 /* MessagesRowCell.swift */; };
+		3A777B3A1DAE06E1009C908E /* MessengerRowViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A777B391DAE06E1009C908E /* MessengerRowViewCell.swift */; };
+		3A777B3C1DAE0758009C908E /* TermsOfServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A777B3B1DAE0758009C908E /* TermsOfServicesViewController.swift */; };
+		3A777B3E1DAE0DF3009C908E /* CalenderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A777B3D1DAE0DF3009C908E /* CalenderCellView.xib */; };
+		3A777B401DAE0E8A009C908E /* CalenderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A777B3F1DAE0E8A009C908E /* CalenderCellView.swift */; };
 		3A8238BF1D91029C00BFCFC9 /* TraineeWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8238BE1D91029C00BFCFC9 /* TraineeWorkoutsViewController.swift */; };
 		3A8238C11D91276700BFCFC9 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8238C01D91276700BFCFC9 /* WorkoutTableViewCell.swift */; };
 		3A9B8AEB1D95406200F6D498 /* workoutCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B8AEA1D95406200F6D498 /* workoutCustomView.swift */; };
@@ -39,10 +42,6 @@
 		3A9B8AF41D95551100F6D498 /* favoritesCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9B8AF31D95551100F6D498 /* favoritesCustomView.xib */; };
 		3A9B8AF61D95552D00F6D498 /* favoritesCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B8AF51D95552D00F6D498 /* favoritesCustomView.swift */; };
 		3A9B8AF81D9BE30800F6D498 /* TraineeCalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B8AF71D9BE30800F6D498 /* TraineeCalenderViewController.swift */; };
-		3A9B8AFA1D9CE59600F6D498 /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9B8AF91D9CE59600F6D498 /* CellView.xib */; };
-		3A9B8AFC1D9D0B8F00F6D498 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B8AFB1D9D0B8F00F6D498 /* CellView.swift */; };
-		3A9B8AFE1D9D1FF800F6D498 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9B8AFD1D9D1FF700F6D498 /* HeaderView.xib */; };
-		3A9B8B001D9D330F00F6D498 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B8AFF1D9D330E00F6D498 /* HeaderView.swift */; };
 		3AD3885F1DA3C12100347109 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3885E1DA3C12100347109 /* SignupViewController.swift */; };
 		3AD388611DA6482E00347109 /* SignupWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD388601DA6482D00347109 /* SignupWithEmailViewController.swift */; };
 		963B14B84C8383625D10BA8B /* Pods_TRNear_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBB86B55EAB82A460CDF169 /* Pods_TRNear_SwiftTests.framework */; };
@@ -90,13 +89,16 @@
 		3A356F5E1D880703008F85C7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3A700B671D9E845E00B3179B /* CreateNewWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewWorkoutViewController.swift; sourceTree = "<group>"; };
 		3A700B6A1D9E8E4200B3179B /* WorkoutDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDetailsViewController.swift; sourceTree = "<group>"; };
-		3A700B6C1DA2313000B3179B /* PinkSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinkSectionHeaderView.swift; sourceTree = "<group>"; };
-		3A700B6D1DA2313000B3179B /* PinkSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinkSectionHeaderView.xib; sourceTree = "<group>"; };
-		3A700B701DA2313900B3179B /* WhiteSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteSectionHeaderView.swift; sourceTree = "<group>"; };
-		3A700B711DA2313900B3179B /* WhiteSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhiteSectionHeaderView.xib; sourceTree = "<group>"; };
-		3A700B741DA2379100B3179B /* AnimationClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationClass.swift; sourceTree = "<group>"; };
 		3A700B761DA28D7B00B3179B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
-		3A700B781DA3749600B3179B /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		3A753C6B1DAE2C6200E50937 /* AnimationClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationClass.swift; sourceTree = "<group>"; };
+		3A753C6D1DAE3D8500E50937 /* CalenderHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderHeaderView.swift; sourceTree = "<group>"; };
+		3A753C6E1DAE3D8500E50937 /* CalenderHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalenderHeaderView.xib; sourceTree = "<group>"; };
+		3A753C711DAE696F00E50937 /* MessengerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerViewController.swift; sourceTree = "<group>"; };
+		3A753C731DAF7CEB00E50937 /* MessagesRowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesRowCell.swift; sourceTree = "<group>"; };
+		3A777B391DAE06E1009C908E /* MessengerRowViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerRowViewCell.swift; sourceTree = "<group>"; };
+		3A777B3B1DAE0758009C908E /* TermsOfServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfServicesViewController.swift; sourceTree = "<group>"; };
+		3A777B3D1DAE0DF3009C908E /* CalenderCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalenderCellView.xib; sourceTree = "<group>"; };
+		3A777B3F1DAE0E8A009C908E /* CalenderCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderCellView.swift; sourceTree = "<group>"; };
 		3A8238BE1D91029C00BFCFC9 /* TraineeWorkoutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraineeWorkoutsViewController.swift; sourceTree = "<group>"; };
 		3A8238C01D91276700BFCFC9 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		3A9B8AEA1D95406200F6D498 /* workoutCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = workoutCustomView.swift; sourceTree = "<group>"; };
@@ -105,10 +107,6 @@
 		3A9B8AF31D95551100F6D498 /* favoritesCustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = favoritesCustomView.xib; sourceTree = "<group>"; };
 		3A9B8AF51D95552D00F6D498 /* favoritesCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = favoritesCustomView.swift; sourceTree = "<group>"; };
 		3A9B8AF71D9BE30800F6D498 /* TraineeCalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraineeCalenderViewController.swift; sourceTree = "<group>"; };
-		3A9B8AF91D9CE59600F6D498 /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
-		3A9B8AFB1D9D0B8F00F6D498 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
-		3A9B8AFD1D9D1FF700F6D498 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
-		3A9B8AFF1D9D330E00F6D498 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		3AD3885E1DA3C12100347109 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		3AD388601DA6482D00347109 /* SignupWithEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupWithEmailViewController.swift; sourceTree = "<group>"; };
 		5C34405D8120F36A496CF9D9 /* Pods_TRNear_SwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRNear_SwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +165,7 @@
 				3A8238BE1D91029C00BFCFC9 /* TraineeWorkoutsViewController.swift */,
 				3A700B671D9E845E00B3179B /* CreateNewWorkoutViewController.swift */,
 				3A700B6A1D9E8E4200B3179B /* WorkoutDetailsViewController.swift */,
+				3A753C711DAE696F00E50937 /* MessengerViewController.swift */,
 			);
 			name = Trainee;
 			sourceTree = "<group>";
@@ -206,8 +205,8 @@
 				3AD3885E1DA3C12100347109 /* SignupViewController.swift */,
 				3A356F341D87D28B008F85C7 /* LoginViewController.swift */,
 				3AD388601DA6482D00347109 /* SignupWithEmailViewController.swift */,
-				3A700B781DA3749600B3179B /* SelectionViewController.swift */,
 				3A700B761DA28D7B00B3179B /* ForgotPasswordViewController.swift */,
+				3A777B3B1DAE0758009C908E /* TermsOfServicesViewController.swift */,
 				3A1A7CCE1D74634E00E5032E /* Main.storyboard */,
 				3A1A7CD11D74634E00E5032E /* Assets.xcassets */,
 				3A1A7CD31D74634E00E5032E /* LaunchScreen.storyboard */,
@@ -238,27 +237,33 @@
 		3A700B691D9E847000B3179B /* CalenderView */ = {
 			isa = PBXGroup;
 			children = (
-				3A700B741DA2379100B3179B /* AnimationClass.swift */,
-				3A700B701DA2313900B3179B /* WhiteSectionHeaderView.swift */,
-				3A700B711DA2313900B3179B /* WhiteSectionHeaderView.xib */,
-				3A700B6C1DA2313000B3179B /* PinkSectionHeaderView.swift */,
-				3A700B6D1DA2313000B3179B /* PinkSectionHeaderView.xib */,
+				3A753C6D1DAE3D8500E50937 /* CalenderHeaderView.swift */,
+				3A753C6E1DAE3D8500E50937 /* CalenderHeaderView.xib */,
+				3A753C6B1DAE2C6200E50937 /* AnimationClass.swift */,
 				3A9B8AF71D9BE30800F6D498 /* TraineeCalenderViewController.swift */,
-				3A9B8AF91D9CE59600F6D498 /* CellView.xib */,
-				3A9B8AFB1D9D0B8F00F6D498 /* CellView.swift */,
-				3A9B8AFD1D9D1FF700F6D498 /* HeaderView.xib */,
-				3A9B8AFF1D9D330E00F6D498 /* HeaderView.swift */,
+				3A777B3D1DAE0DF3009C908E /* CalenderCellView.xib */,
+				3A777B3F1DAE0E8A009C908E /* CalenderCellView.swift */,
 			);
 			name = CalenderView;
+			sourceTree = "<group>";
+		};
+		3A777B381DAE0685009C908E /* MessengerView */ = {
+			isa = PBXGroup;
+			children = (
+				3A777B391DAE06E1009C908E /* MessengerRowViewCell.swift */,
+			);
+			name = MessengerView;
 			sourceTree = "<group>";
 		};
 		3A9B8AF01D9549BE00F6D498 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				3A777B381DAE0685009C908E /* MessengerView */,
 				3A8238C01D91276700BFCFC9 /* WorkoutTableViewCell.swift */,
 				3A9B8AF21D9554F200F6D498 /* favorites_workouts */,
 				3A9B8AF11D9554D700F6D498 /* upcoming_workouts */,
 				3A9B8AEE1D9546CC00F6D498 /* UIViewExtension.swift */,
+				3A753C731DAF7CEB00E50937 /* MessagesRowCell.swift */,
 			);
 			name = CustomViews;
 			sourceTree = "<group>";
@@ -430,13 +435,11 @@
 				3A1A7CD51D74634E00E5032E /* LaunchScreen.storyboard in Resources */,
 				3A9B8AF41D95551100F6D498 /* favoritesCustomView.xib in Resources */,
 				3A356F5F1D880703008F85C7 /* Default-568h@2x.png in Resources */,
-				3A700B731DA2313900B3179B /* WhiteSectionHeaderView.xib in Resources */,
-				3A9B8AFE1D9D1FF800F6D498 /* HeaderView.xib in Resources */,
-				3A9B8AFA1D9CE59600F6D498 /* CellView.xib in Resources */,
+				3A777B3E1DAE0DF3009C908E /* CalenderCellView.xib in Resources */,
 				3A1A7CD21D74634E00E5032E /* Assets.xcassets in Resources */,
+				3A753C701DAE3D8500E50937 /* CalenderHeaderView.xib in Resources */,
 				3A1A7CD01D74634E00E5032E /* Main.storyboard in Resources */,
 				3A9B8AED1D95408C00F6D498 /* workoutCustomView.xib in Resources */,
-				3A700B6F1DA2313000B3179B /* PinkSectionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,24 +602,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A753C721DAE696F00E50937 /* MessengerViewController.swift in Sources */,
+				3A753C741DAF7CEB00E50937 /* MessagesRowCell.swift in Sources */,
 				3A356F351D87D28B008F85C7 /* LoginViewController.swift in Sources */,
 				3A9B8AEB1D95406200F6D498 /* workoutCustomView.swift in Sources */,
 				3A9B8AEF1D9546CC00F6D498 /* UIViewExtension.swift in Sources */,
 				3A1A7CCD1D74634E00E5032E /* ViewController.swift in Sources */,
 				3A9B8AF81D9BE30800F6D498 /* TraineeCalenderViewController.swift in Sources */,
-				3A700B791DA3749600B3179B /* SelectionViewController.swift in Sources */,
+				3A777B401DAE0E8A009C908E /* CalenderCellView.swift in Sources */,
 				3A8238BF1D91029C00BFCFC9 /* TraineeWorkoutsViewController.swift in Sources */,
-				3A9B8AFC1D9D0B8F00F6D498 /* CellView.swift in Sources */,
 				3A700B681D9E845E00B3179B /* CreateNewWorkoutViewController.swift in Sources */,
 				3A700B771DA28D7B00B3179B /* ForgotPasswordViewController.swift in Sources */,
 				3A9B8AF61D95552D00F6D498 /* favoritesCustomView.swift in Sources */,
-				3A700B6E1DA2313000B3179B /* PinkSectionHeaderView.swift in Sources */,
+				3A777B3C1DAE0758009C908E /* TermsOfServicesViewController.swift in Sources */,
 				3A700B6B1D9E8E4200B3179B /* WorkoutDetailsViewController.swift in Sources */,
 				3A042FA91D92B42100D2C07D /* GlobalVariables.swift in Sources */,
+				3A753C6C1DAE2C6200E50937 /* AnimationClass.swift in Sources */,
+				3A753C6F1DAE3D8500E50937 /* CalenderHeaderView.swift in Sources */,
 				3A13D4271D8BCED20039631E /* TraineeHomeViewController.swift in Sources */,
-				3A700B751DA2379100B3179B /* AnimationClass.swift in Sources */,
-				3A9B8B001D9D330F00F6D498 /* HeaderView.swift in Sources */,
-				3A700B721DA2313900B3179B /* WhiteSectionHeaderView.swift in Sources */,
+				3A777B3A1DAE06E1009C908E /* MessengerRowViewCell.swift in Sources */,
 				3A13D41D1D8953610039631E /* TraineeDashboardViewController.swift in Sources */,
 				3A1A7CCB1D74634E00E5032E /* AppDelegate.swift in Sources */,
 				3A8238C11D91276700BFCFC9 /* WorkoutTableViewCell.swift in Sources */,

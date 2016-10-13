@@ -1,23 +1,33 @@
 //
-//  CellView.swift
-//  testApplicationCalendar
+//  CalenderCellView.swift
+//  TRNear_Swift
 //
-//  Created by JayT on 2016-03-04.
-//  Copyright © 2016 OS-Tech. All rights reserved.
+//  Created by smita on 12/10/16.
+//  Copyright © 2016 Acellere. All rights reserved.
 //
 
-
+import UIKit
 import JTAppleCalendar
 
-class CellView: JTAppleDayCellView {
-    @IBInspectable var todayColor: UIColor!// = UIColor(red: 254.0/255.0, green: 73.0/255.0, blue: 64.0/255.0, alpha: 0.3)
-    @IBInspectable var normalDayColor: UIColor! //UIColor(white: 0.0, alpha: 0.1)
+class CalenderCellView: JTAppleDayCellView {
+    @IBInspectable var todayColor: UIColor!
+    @IBInspectable var normalDayColor: UIColor = UIColor.brownColor()
     @IBOutlet var selectedView: AnimationView!
     @IBOutlet var dayLabel: UILabel!
     
     let textSelectedColor = UIColor.whiteColor()
     let textDeselectedColor = UIColor.blackColor()
     let previousMonthTextColor = UIColor.grayColor()
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        
+        self.layer.cornerRadius = self.frame.width/4
+        self.layer.borderColor = UIColor.clearColor().CGColor
+        
+    }
+    
     lazy var todayDate : String = {
         [weak self] in
         let aString = self!.c.stringFromDate(NSDate())
@@ -41,29 +51,12 @@ class CellView: JTAppleDayCellView {
         self.backgroundColor = c.stringFromDate(date) == todayDate ? todayColor:normalDayColor
         
         // Setup cell selection status
-//        delayRunOnMainThread(0.0) {
-//            self.configueViewIntoBubbleView(cellState)
-//        }
+        delayRunOnMainThread(0.0) {
+            self.configueViewIntoBubbleView(cellState)
+        }
         
         // Configure Visibility
         configureVisibility(cellState)
-        
-        // With cell states you can literally control every aspect of the calendar view
-        // Uncomment this code block to watch "JTAPPLE" spelt on the calendar
-        //        let dateSection = c.stringFromDate(cellState.dateSection().dateRange.start)
-        //        if dateSection == "2016-01-01" && (cellState.row() == 0 || cellState.column() == 3 || (cellState.row() == 5 && cellState.column() < 4)) {
-        //            self.backgroundColor = UIColor.redColor()
-        //        } else if dateSection == "2016-02-01" && (cellState.row() == 0 || cellState.column() == 3) {
-        //            self.backgroundColor = UIColor.redColor()
-        //        } else if dateSection == "2016-03-01" && (cellState.column() == 0 || cellState.column() == 6 || cellState.row() == 2 || cellState.row() == 0) {
-        //            self.backgroundColor = UIColor.redColor()
-        //        } else if dateSection == "2016-04-01" && (cellState.column() == 0 || (cellState.column() == 6 && cellState.row() < 3) || cellState.row() == 2 || cellState.row() == 0) {
-        //            self.backgroundColor = UIColor.redColor()
-        //        } else if dateSection == "2016-05-01" && (cellState.column() == 0 || (cellState.column() == 6 && cellState.row() < 3) || cellState.row() == 2 || cellState.row() == 0) {
-        //            self.backgroundColor = UIColor.redColor()
-        //        } else if dateSection == "2016-06-01" && (cellState.column() == 0 || cellState.row() == 5) {
-        //            self.backgroundColor = UIColor.redColor()
-        //        }
     }
     
     func configureVisibility(cellState: CellState) {
