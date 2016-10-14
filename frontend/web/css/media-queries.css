@@ -15,10 +15,21 @@
 	}
 }
 
-@media (min-height: 500px) {
+@media (min-height: 750px) and (min-width: 1050px) {
 	.centered-container
 	{
 		top: calc(50% - 45px);
 		transform: translateY(-50%);
+	}
+	main
+	{
+		padding-top: 90px;
+	}
+	.navbar
+	{
+	    position: fixed;
+	    right: 0;
+	    left: 0;
+	    z-index: 1030;
 	}
 }

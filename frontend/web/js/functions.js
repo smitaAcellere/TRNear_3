@@ -1,6 +1,6 @@
 
-/*$(document).ready(function(){
+$(document).ready(function(){
 
-	console.log("this program is running");
+	$("#fittext-01").fitText(1.2); // Turn the compressor up   (resizes more aggressively)
 
-});*/
+});

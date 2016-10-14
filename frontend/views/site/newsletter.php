@@ -13,9 +13,9 @@ $this->title = 'Subscribe';
 <div class="centered-container">
     <div class="bkgd-container"></div>
     <div class="content-container" id="cta-block">
-        <h1>Large Headline Here</h1>
+        <h1 id="fittext-01">TRNear—<br>Making personal fitness easier.</h1>
         <hr>
-        <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit..</p>
+        <p>Are you a personal trainer looking to grow your business?<br>Sign up now to get early access and stay notified on our development!</p>
         <?php if (Yii::$app->session->hasFlash('success')) { ?>
             <div class="alert-success alert fade in" id="w1-success-0">
                 <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>

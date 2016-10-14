@@ -36,6 +36,10 @@ body
 }
 
 /* nav styles */
+.navbar
+{
+	margin-bottom: 0;
+}
 .navbar-nav
 {
 	margin: 15px 0;
@@ -63,8 +67,7 @@ body
 
 main
 {
-	height: calc(100% - 90px);
-	margin-top: 90px;
+	height: 100vh;
 }
 
 .centered-container

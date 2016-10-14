@@ -17,10 +17,11 @@ AppAsset::register($this);
     <head>
         <meta charset="<?= Yii::$app->charset ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/new_site.css" rel="stylesheet">
+        <link href="css/media-queries.css" rel="stylesheet">
         <script href="js/functions.js"></script>
         <script href="js/includes/jquery.fittext.js"></script>
         <script src="https://use.typekit.net/crz3rur.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
         <?= Html::csrfMetaTags() ?>
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
@@ -62,38 +63,40 @@ AppAsset::register($this);
               ]);
               NavBar::end(); */
             ?>
-            <nav class="navbar navbar-fixed-top">
-		  <a class="navbar-brand" href="#">
-		  	<img src="img/trnear_logo_01.svg"/>
-		  </a>
-		  <ul class="nav navbar-nav pull-right" id="social-media-icons">
-		    <li class="nav-item active">
-		      <a class="nav-link" href="#">
-		      	<img src="img/icon-twitter.svg"/>
-		      </a>
-		    </li>
-		    <li class="nav-item">
-		      <a class="nav-link" href="#">
-		      	<img src="img/icon-instagram.svg"/>
-		      </a>
-		    </li>
-		    <li class="nav-item">
-		      <a class="nav-link" href="#">
-		      	<img src="img/icon-facebook.svg"/>
-		      </a>
-		    </li>
-		  </ul>
-		</nav>
-            <main role="main">
-                <div class="container">
-                    <?=
-                    Breadcrumbs::widget([
-                        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                    ])
-                    ?>
-                    <?= $content ?>
-                </div>
-            </main>
+            <nav class="navbar">
+        		  <a class="navbar-brand" href="#">
+        		  	<img src="img/trnear_logo_01.svg"/>
+        		  </a>
+              <!--
+        		  <ul class="nav navbar-nav pull-right" id="social-media-icons">
+        		    <li class="nav-item active">
+        		      <a class="nav-link" href="#">
+        		      	<img src="img/icon-twitter.svg"/>
+        		      </a>
+        		    </li>
+        		    <li class="nav-item">
+        		      <a class="nav-link" href="#">
+        		      	<img src="img/icon-instagram.svg"/>
+        		      </a>
+        		    </li>
+        		    <li class="nav-item">
+        		      <a class="nav-link" href="#">
+        		      	<img src="img/icon-facebook.svg"/>
+        		      </a>
+        		    </li>
+        		  </ul>
+              -->
+        		</nav>
+            <div class="container">
+              <main role="main">
+                      <?=
+                      Breadcrumbs::widget([
+                          'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                      ])
+                      ?>
+                      <?= $content ?>
+              </main>
+            </div>
 
         </div>
 
