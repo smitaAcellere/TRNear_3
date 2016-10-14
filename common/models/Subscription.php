@@ -45,7 +45,7 @@ class Subscription extends \yii\db\ActiveRecord
             'id' => Yii::t('app', 'ID'),
             'email_id' => Yii::t('app', 'Email ID'),
             'subscription_date' => Yii::t('app', 'Subscription Date'),
-            'subscriber_name' => Yii::t('app', 'Subscriber Name'),
+            'subscriber_name' => Yii::t('app', 'Full Name'),
             'fitness_type' => Yii::t('app', 'Fitness Type'),
         ];
     }

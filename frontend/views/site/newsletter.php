@@ -29,7 +29,7 @@ $this->title = 'Subscribe';
         <?php $form = ActiveForm::begin(); ?>
 
         <div class="form-group">
-            <?= $form->field($model, 'subscriber_name')->textInput(['autofocus' => true, 'placeholder' => 'Subscriber Name'])->label(false) ?>
+            <?= $form->field($model, 'subscriber_name')->textInput(['autofocus' => true, 'placeholder' => 'Full Name'])->label(false) ?>
 
             <?= $form->field($model, 'email_id')->textInput(['placeholder' => 'Email Address'])->label(false) ?>
 

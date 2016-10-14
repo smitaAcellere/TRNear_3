@@ -17,10 +17,8 @@ AppAsset::register($this);
     <head>
         <meta charset="<?= Yii::$app->charset ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
         <script src="https://use.typekit.net/crz3rur.js"></script>
-        
-<!--         <script>try{Typekit.load({ async: true });}catch(e){}</script> -->
         <script type="text/javascript">
           (function() {
             $(document).ready(function() {
@@ -48,8 +46,6 @@ AppAsset::register($this);
             } catch(e) {}
           })();
         </script>
-
-
 
         <?= Html::csrfMetaTags() ?>
         <title><?= Html::encode($this->title) ?></title>
