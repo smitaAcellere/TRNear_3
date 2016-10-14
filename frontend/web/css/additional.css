@@ -22,7 +22,7 @@ h1, h2, h3, p
 
 body
 {
-	font-family: "skolar-sans-latin";
+	font-family: "skolar-sans-latin", "helvetica", sans-serif;
 	background-color: #212123;
 	background: url(../img/trnear_main_bkgd_sm_01.png) no-repeat center center fixed;
 	-webkit-background-size: cover;
