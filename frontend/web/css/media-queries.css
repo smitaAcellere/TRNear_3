@@ -13,13 +13,20 @@
 	{
 		width: auto;
 	}
+	#cta-block p
+	{
+		padding: 0;
+	}
 }
 
 @media (min-height: 750px) and (min-width: 1050px) {
-	.centered-container
+	body
 	{
-		top: calc(50% - 45px);
-		transform: translateY(-50%);
+		background: url(../img/trnear_main_bkgd_lg_01.png) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 	}
 	main
 	{
@@ -31,5 +38,10 @@
 	    right: 0;
 	    left: 0;
 	    z-index: 1030;
+	}
+	.centered-container
+	{
+		top: calc(50% - 45px);
+		transform: translateY(-50%);
 	}
 }

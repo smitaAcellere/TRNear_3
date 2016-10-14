@@ -35,7 +35,7 @@ $this->title = 'Subscribe';
 
             <?= $form->field($model, 'fitness_type')->textInput(['placeholder' => 'Fitness Type (Optional)'])->label(false) ?>
 
-            <?= Html::submitButton('Notify me!!!', ['id'=>'submit-email-button','class' => 'btn btn-primary btn-lg form-control', 'name' => 'signup-button']); ?>
+            <?= Html::submitButton('Notify me!', ['id'=>'submit-email-button','class' => 'btn btn-primary btn-lg form-control', 'name' => 'signup-button']); ?>
         </div>
 
         <?php ActiveForm::end(); ?>
