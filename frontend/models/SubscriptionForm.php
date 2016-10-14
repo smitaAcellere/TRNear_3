@@ -10,6 +10,8 @@ use common\models\Subscription;
 class SubscriptionForm extends Model
 {
     public $email_id;
+    public $subscriber_name;
+    public $fitness_type;
 
 
     /**
@@ -18,6 +20,8 @@ class SubscriptionForm extends Model
     public function rules()
     {
         return [
+            ['subscriber_name', 'required'],
+            ['fitness_type', 'string'],
             ['email_id', 'trim'],
             ['email_id', 'required'],
             ['email_id', 'email'],
@@ -36,10 +40,11 @@ class SubscriptionForm extends Model
         if (!$this->validate()) {
             return null;
         }
-        
         $user = new Subscription;
         $user->email_id = $this->email_id;
-        $user->subscription_date = date("Y-m-d H:i:s"); ;  
+        $user->fitness_type = $this->fitness_type;
+        $user->subscriber_name = $this->subscriber_name;
+        $user->subscription_date = date("Y-m-d H:i:s");  
         return $user->save() ? $user : null;
     }
 }

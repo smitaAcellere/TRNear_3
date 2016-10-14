@@ -10,6 +10,8 @@ use Yii;
  * @property integer $id
  * @property string $email_id
  * @property string $subscription_date
+ * @property string $subscriber_name
+ * @property string $fitness_type
  */
 class Subscription extends \yii\db\ActiveRecord
 {
@@ -28,7 +30,9 @@ class Subscription extends \yii\db\ActiveRecord
     {
         return [
             [['subscription_date'], 'safe'],
+            [['fitness_type'], 'string'],
             [['email_id'], 'string', 'max' => 100],
+            [['subscriber_name'], 'string', 'max' => 50],
         ];
     }
 
@@ -41,6 +45,8 @@ class Subscription extends \yii\db\ActiveRecord
             'id' => Yii::t('app', 'ID'),
             'email_id' => Yii::t('app', 'Email ID'),
             'subscription_date' => Yii::t('app', 'Subscription Date'),
+            'subscriber_name' => Yii::t('app', 'Subscriber Name'),
+            'fitness_type' => Yii::t('app', 'Fitness Type'),
         ];
     }
 }

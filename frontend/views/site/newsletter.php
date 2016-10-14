@@ -29,16 +29,13 @@ $this->title = 'Subscribe';
         <?php $form = ActiveForm::begin(); ?>
 
         <div class="form-group">
-            <?=
-            $form->field($model, 'email_id', [
-                'addon' => [
-                    'append' => [
-                        'content' => Html::submitButton('Notify Me!', ['id' => 'submit-email-button', 'class' => 'btn btn-lg btn-primary', 'name' => 'signup-button']),
-                        'asButton' => true
-                    ]
-                ]
-            ])->textInput(['autofocus' => true, 'placeholder' => 'Email Address'])->label(false)
-            ?>
+            <?= $form->field($model, 'subscriber_name')->textInput(['autofocus' => true, 'placeholder' => 'Subscriber Name'])->label(false) ?>
+
+            <?= $form->field($model, 'email_id')->textInput(['placeholder' => 'Email Address'])->label(false) ?>
+
+            <?= $form->field($model, 'fitness_type')->textInput(['placeholder' => 'Fitness Type (Optional)'])->label(false) ?>
+
+            <?= Html::submitButton('Notify me!!!', ['id'=>'submit-email-button','class' => 'btn btn-primary btn-lg form-control', 'name' => 'signup-button']); ?>
         </div>
 
         <?php ActiveForm::end(); ?>
