@@ -17,11 +17,40 @@ AppAsset::register($this);
     <head>
         <meta charset="<?= Yii::$app->charset ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/media-queries.css" rel="stylesheet">
-        <script href="js/functions.js"></script>
-        <script href="js/includes/jquery.fittext.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
         <script src="https://use.typekit.net/crz3rur.js"></script>
-        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+        
+<!--         <script>try{Typekit.load({ async: true });}catch(e){}</script> -->
+        <script type="text/javascript">
+          (function() {
+            $(document).ready(function() {
+              // As soon as the DOM is ready, make the example invisible
+              $('h1').css('visibility', 'hidden');
+            });
+            try {
+              Typekit.load({
+                active: function() {
+                  // As soon as the fonts are active, fade in the example
+                  // Don't fade in browsers that don't do proper opacity, like IE
+                  if (jQuery.support.opacity) {
+                    console.log("test");
+                    $('h1').css('visibility', 'visible').hide().fadeIn();
+                  } else {
+                    $('h1').css('visibility', 'visible');
+                  }
+                },
+                inactive: function() {
+                  // If the fonts are inactive, just show the example
+                  // You can apply fallback styles using the wf-inactive class in your CSS
+                  $('h1').css('visibility', 'visible');
+                }
+              })
+            } catch(e) {}
+          })();
+        </script>
+
+
+
         <?= Html::csrfMetaTags() ?>
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
