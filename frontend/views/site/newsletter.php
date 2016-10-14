@@ -6,7 +6,7 @@
 use yii\helpers\Html;
 use kartik\form\ActiveForm;
 
-$this->title = 'Subscribe';
+$this->title = 'TRNear - Coming Soon';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <!-- blue box -->
@@ -26,7 +26,7 @@ $this->title = 'Subscribe';
 
         <?php } ?>
 
-        <?php $form = ActiveForm::begin(); ?>
+        <?php $form = ActiveForm::begin(['validateOnChange'=> 0,'validateOnBlur'=>0]); ?>
 
         <div class="form-group">
             <?= $form->field($model, 'subscriber_name')->textInput(['autofocus' => true, 'placeholder' => 'Full Name'])->label(false) ?>
