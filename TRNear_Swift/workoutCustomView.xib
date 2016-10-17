@@ -96,6 +96,14 @@
                         <constraint firstAttribute="width" constant="97" id="pPw-fQ-qZz"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="try-3s-GBR">
+                    <rect key="frame" x="231" y="10" width="86" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="5ME-9b-JTT"/>
+                        <constraint firstAttribute="width" constant="86" id="jBs-OX-oIy"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="confirmed"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -116,9 +124,11 @@
                 <constraint firstAttribute="bottom" secondItem="lJO-2B-qdy" secondAttribute="bottom" constant="114" id="ZG1-n2-jQp"/>
                 <constraint firstItem="EwM-1T-wao" firstAttribute="baseline" secondItem="oJ8-Ow-Bii" secondAttribute="baseline" id="Zff-sh-Ukj"/>
                 <constraint firstItem="lJO-2B-qdy" firstAttribute="centerX" secondItem="46h-JS-Qsb" secondAttribute="centerX" id="eQs-av-f8a"/>
+                <constraint firstAttribute="trailing" secondItem="try-3s-GBR" secondAttribute="trailing" constant="18" id="f8f-GD-a1g"/>
                 <constraint firstItem="46h-JS-Qsb" firstAttribute="top" secondItem="lJO-2B-qdy" secondAttribute="bottom" constant="60" id="fvw-1c-cNA"/>
                 <constraint firstAttribute="bottom" secondItem="EwM-1T-wao" secondAttribute="bottom" constant="15" id="h9Q-v3-vVk"/>
                 <constraint firstItem="EwM-1T-wao" firstAttribute="top" secondItem="Gqu-g4-jOO" secondAttribute="bottom" constant="37" id="is6-g8-r3S"/>
+                <constraint firstItem="try-3s-GBR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="jKe-uu-5f1"/>
                 <constraint firstItem="MUf-cI-FYs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="l03-gZ-9gR"/>
                 <constraint firstItem="gKj-J1-XJ6" firstAttribute="top" secondItem="MUf-cI-FYs" secondAttribute="bottom" constant="14" id="lXQ-UC-3qw"/>
                 <constraint firstAttribute="bottom" secondItem="2mk-Iu-xHs" secondAttribute="bottom" constant="15" id="m2i-ud-QYW"/>
@@ -134,6 +144,7 @@
         </view>
     </objects>
     <resources>
+        <image name="confirmed" width="86" height="20"/>
         <image name="rating" width="97" height="16"/>
         <image name="user_cover_pic" width="335" height="255"/>
     </resources>

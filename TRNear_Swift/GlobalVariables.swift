@@ -17,6 +17,15 @@ class GlobalVariables {
         
         // hex : #c7c7cd
         static let border_light = UIColor.init(colorLiteralRed: 199.0/255.0, green: 199.0/255.0, blue: 205.0/255.0, alpha: 1.0)
+        
+        // hex : #efeff4
+        static let cell_light = UIColor.init(colorLiteralRed: 235.0/255.0, green: 235.0/255.0, blue: 242.0/255.0, alpha: 1.0)
+        
+        // hex : #030303
+        static let cell_dark = UIColor.init(colorLiteralRed: 4.0/255.0, green: 4.0/255.0, blue: 4.0/255.0, alpha: 1.0)
+        
+        // hex : #54c7fc
+        static let cell_today = UIColor.init(colorLiteralRed: 78.0/255.0, green: 184.0/255.0, blue: 255.0/255.0, alpha: 1.0)
     }
     
 }
@@ -98,30 +107,12 @@ extension UIViewController {
     }
     
     func keyboardWillShow(sender: NSNotification) {
-        self.view.frame.origin.y = -150
+        self.view.frame.origin.y = -208
     }
     
     func keyboardWillHide(sender: NSNotification) {
         self.view.frame.origin.y = 0
     }
-    
-//    func keyboardWillShow(notification: NSNotification) {
-//        
-//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-//            if self.view.frame.origin.y == 0{
-//                self.view.frame.origin.y -= keyboardSize.height
-//            }
-//        }
-//        
-//    }
-//    
-//    func keyboardWillHide(notification: NSNotification) {
-//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-//            if self.view.frame.origin.y != 0{
-//                self.view.frame.origin.y += keyboardSize.height
-//            }
-//        }
-//    }
     
     func alertView(title:String,message:String) {
         

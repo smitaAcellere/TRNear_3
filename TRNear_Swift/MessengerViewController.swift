@@ -8,16 +8,14 @@
 
 import UIKit
 
-class MessengerViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class MessengerViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
 
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var userDetailsBackView: UIView!
     @IBOutlet weak var messagesTableView: UITableView!
-
+    @IBOutlet weak var txtReply: UITextField!
+    
     var jsonResponse : String! = nil
-    
-    
-//    print("dictionaryString ::: ",jsonResponse)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +32,30 @@ class MessengerViewController: UIViewController,UITableViewDelegate,UITableViewD
         
         messagesTableView.estimatedRowHeight = 100.0
         messagesTableView.rowHeight = UITableViewAutomaticDimension
+        
+        self.txtReply.delegate = self
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
+    }
+    
+    // MARK: - UITextFieldDelegate
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.txtReply.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
     }
     
     // MARK: - UITableView

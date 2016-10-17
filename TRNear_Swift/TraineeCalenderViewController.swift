@@ -18,9 +18,19 @@ class TraineeCalenderViewController: UIViewController {
     let formatter = NSDateFormatter()
     let testCalendar: NSCalendar! = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
     
-    @IBAction func listBarButtonAction(sender: UIBarButtonItem) {
-        self.navigationController?.popViewControllerAnimated(true)
-    }
+    var eventDateArray = ["2016 10 09","2016 11 11","2016 10 20"];
+    
+    lazy var todayDate : String = {
+        [weak self] in
+        let aString = self!.c.stringFromDate(NSDate())
+        return aString
+        }()
+    lazy var c : NSDateFormatter = {
+        let f = NSDateFormatter()
+        f.dateFormat = "yyyy-MM-dd"
+        
+        return f
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,27 +49,18 @@ class TraineeCalenderViewController: UIViewController {
         self.calendarView.scrollingMode = .StopAtEachCalendarFrameWidth
         self.calendarView.itemSize = nil
         self.calendarView.rangeSelectionWillBeUsed = false
-        self.calendarView.cellInset = CGPoint(x: 0, y: 0)
+        self.calendarView.cellInset = CGPoint(x: 3, y: 6)
         
     }
     
-    
+    @IBAction func listBarButtonAction(sender: UIBarButtonItem) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func setupViewsOfCalendar(startDate: NSDate, endDate: NSDate) {
         let month = testCalendar.component(NSCalendarUnit.Month, fromDate: startDate)
@@ -87,7 +88,7 @@ extension TraineeCalenderViewController: JTAppleCalendarViewDataSource, JTAppleC
         formatter.dateFormat = "yyyy MM dd"
         
         let firstDate = NSDate()
-        let secondDate = formatter.dateFromString("2017 12 11")
+        let secondDate = formatter.dateFromString("2016 12 11")
         let numberOfRows = 6
         let aCalendar = NSCalendar.currentCalendar() // Properly configure your calendar to your time zone here
         setupViewsOfCalendar(firstDate, endDate: secondDate!)
@@ -96,7 +97,7 @@ extension TraineeCalenderViewController: JTAppleCalendarViewDataSource, JTAppleC
     }
     
     func calendar(calendar: JTAppleCalendarView, isAboutToDisplayCell cell: JTAppleDayCellView, date: NSDate, cellState: CellState) {
-        (cell as? CalenderCellView)?.setupCellBeforeDisplay(cellState, date: date)
+        (cell as? CalenderCellView)?.setupCellBeforeDisplay(cellState, date: date, eventDateArray: eventDateArray)
     }
     
     func calendar(calendar: JTAppleCalendarView, didDeselectDate date: NSDate, cell: JTAppleDayCellView?, cellState: CellState) {
@@ -104,8 +105,24 @@ extension TraineeCalenderViewController: JTAppleCalendarViewDataSource, JTAppleC
     }
     
     func calendar(calendar: JTAppleCalendarView, didSelectDate date: NSDate, cell: JTAppleDayCellView?, cellState: CellState) {
-        (cell as? CalenderCellView)?.cellSelectionChanged(cellState)
-        printSelectedDates()
+//        (cell as? CalenderCellView)?.cellSelectionChanged(cellState)
+                
+        for eventDate in eventDateArray {
+            
+            if date.equalToDate(c.dateFromString(eventDate)!) {
+                
+                if c.dateFromString(eventDate)!.isGreaterThanDate(c.dateFromString(todayDate)!) {
+                    
+                    let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("eventDetailsVC") as! EventDetailsViewController
+                    viewController.dateString = eventDate
+                    self.navigationController?.pushViewController(viewController, animated:true)
+                    
+                }else{
+                    // Past
+                }
+            }
+        }
+
     }
     
     func calendar(calendar: JTAppleCalendarView, isAboutToResetCell cell: JTAppleDayCellView) {
@@ -143,5 +160,62 @@ func delayRunOnMainThread(delay:Double, closure:()->()) {
             Int64(delay * Double(NSEC_PER_SEC))
         ),
         dispatch_get_main_queue(), closure)
+}
+
+extension NSDate {
+    func isGreaterThanDate(dateToCompare: NSDate) -> Bool {
+        //Declare Variables
+        var isGreater = false
+        
+        //Compare Values
+        if self.compare(dateToCompare) == NSComparisonResult.OrderedDescending {
+            isGreater = true
+        }
+        
+        //Return Result
+        return isGreater
+    }
+    
+    func isLessThanDate(dateToCompare: NSDate) -> Bool {
+        //Declare Variables
+        var isLess = false
+        
+        //Compare Values
+        if self.compare(dateToCompare) == NSComparisonResult.OrderedAscending {
+            isLess = true
+        }
+        
+        //Return Result
+        return isLess
+    }
+    
+    func equalToDate(dateToCompare: NSDate) -> Bool {
+        //Declare Variables
+        var isEqualTo = false
+        
+        //Compare Values
+        if self.compare(dateToCompare) == NSComparisonResult.OrderedSame {
+            isEqualTo = true
+        }
+        
+        //Return Result
+        return isEqualTo
+    }
+    
+    func addDays(daysToAdd: Int) -> NSDate {
+        let secondsInDays: NSTimeInterval = Double(daysToAdd) * 60 * 60 * 24
+        let dateWithDaysAdded: NSDate = self.dateByAddingTimeInterval(secondsInDays)
+        
+        //Return Result
+        return dateWithDaysAdded
+    }
+    
+    func addHours(hoursToAdd: Int) -> NSDate {
+        let secondsInHours: NSTimeInterval = Double(hoursToAdd) * 60 * 60
+        let dateWithHoursAdded: NSDate = self.dateByAddingTimeInterval(secondsInHours)
+        
+        //Return Result
+        return dateWithHoursAdded
+    }
 }
 

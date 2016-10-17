@@ -15,13 +15,19 @@ class TermsOfServicesViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func backButtonAction(sender: UIButton!) {
+        
+        self.navigationController?.popViewControllerAnimated(true)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
 

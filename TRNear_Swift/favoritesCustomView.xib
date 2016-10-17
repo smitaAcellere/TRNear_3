@@ -56,9 +56,12 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="RS7-xK-OAL" secondAttribute="trailing" constant="20" id="26u-Dx-vf5"/>
+                        <constraint firstItem="RS7-xK-OAL" firstAttribute="leading" secondItem="NVP-rb-Kcg" secondAttribute="trailing" constant="5" id="3IB-Oq-0tD"/>
                         <constraint firstItem="RS7-xK-OAL" firstAttribute="centerY" secondItem="2v1-Am-k6k" secondAttribute="centerY" id="KIE-Gm-tMn"/>
+                        <constraint firstItem="NVP-rb-Kcg" firstAttribute="leading" secondItem="2v1-Am-k6k" secondAttribute="leading" constant="20" id="MMb-nd-J4g"/>
                         <constraint firstItem="RS7-xK-OAL" firstAttribute="leading" secondItem="2uF-Ma-h7Q" secondAttribute="trailing" constant="5" id="V3f-Gf-fi6"/>
                         <constraint firstItem="2uF-Ma-h7Q" firstAttribute="leading" secondItem="NVP-rb-Kcg" secondAttribute="leading" id="esZ-kk-EcD"/>
+                        <constraint firstItem="2uF-Ma-h7Q" firstAttribute="leading" secondItem="2v1-Am-k6k" secondAttribute="leading" constant="20" id="qRv-Cy-grj"/>
                         <constraint firstItem="RS7-xK-OAL" firstAttribute="firstBaseline" secondItem="2uF-Ma-h7Q" secondAttribute="firstBaseline" constant="-7" id="tyE-Rd-v5l"/>
                         <constraint firstItem="2uF-Ma-h7Q" firstAttribute="top" secondItem="NVP-rb-Kcg" secondAttribute="bottom" constant="-2" id="ywT-4c-yrJ"/>
                     </constraints>

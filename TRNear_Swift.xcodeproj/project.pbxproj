@@ -30,6 +30,7 @@
 		3A753C701DAE3D8500E50937 /* CalenderHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A753C6E1DAE3D8500E50937 /* CalenderHeaderView.xib */; };
 		3A753C721DAE696F00E50937 /* MessengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A753C711DAE696F00E50937 /* MessengerViewController.swift */; };
 		3A753C741DAF7CEB00E50937 /* MessagesRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A753C731DAF7CEB00E50937 /* MessagesRowCell.swift */; };
+		3A753C781DB0990D00E50937 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A753C771DB0990D00E50937 /* EventDetailsViewController.swift */; };
 		3A777B3A1DAE06E1009C908E /* MessengerRowViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A777B391DAE06E1009C908E /* MessengerRowViewCell.swift */; };
 		3A777B3C1DAE0758009C908E /* TermsOfServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A777B3B1DAE0758009C908E /* TermsOfServicesViewController.swift */; };
 		3A777B3E1DAE0DF3009C908E /* CalenderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A777B3D1DAE0DF3009C908E /* CalenderCellView.xib */; };
@@ -95,6 +96,7 @@
 		3A753C6E1DAE3D8500E50937 /* CalenderHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalenderHeaderView.xib; sourceTree = "<group>"; };
 		3A753C711DAE696F00E50937 /* MessengerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerViewController.swift; sourceTree = "<group>"; };
 		3A753C731DAF7CEB00E50937 /* MessagesRowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesRowCell.swift; sourceTree = "<group>"; };
+		3A753C771DB0990D00E50937 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		3A777B391DAE06E1009C908E /* MessengerRowViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerRowViewCell.swift; sourceTree = "<group>"; };
 		3A777B3B1DAE0758009C908E /* TermsOfServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfServicesViewController.swift; sourceTree = "<group>"; };
 		3A777B3D1DAE0DF3009C908E /* CalenderCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalenderCellView.xib; sourceTree = "<group>"; };
@@ -241,8 +243,9 @@
 				3A753C6E1DAE3D8500E50937 /* CalenderHeaderView.xib */,
 				3A753C6B1DAE2C6200E50937 /* AnimationClass.swift */,
 				3A9B8AF71D9BE30800F6D498 /* TraineeCalenderViewController.swift */,
-				3A777B3D1DAE0DF3009C908E /* CalenderCellView.xib */,
 				3A777B3F1DAE0E8A009C908E /* CalenderCellView.swift */,
+				3A777B3D1DAE0DF3009C908E /* CalenderCellView.xib */,
+				3A753C771DB0990D00E50937 /* EventDetailsViewController.swift */,
 			);
 			name = CalenderView;
 			sourceTree = "<group>";
@@ -259,10 +262,10 @@
 			isa = PBXGroup;
 			children = (
 				3A777B381DAE0685009C908E /* MessengerView */,
-				3A8238C01D91276700BFCFC9 /* WorkoutTableViewCell.swift */,
 				3A9B8AF21D9554F200F6D498 /* favorites_workouts */,
 				3A9B8AF11D9554D700F6D498 /* upcoming_workouts */,
 				3A9B8AEE1D9546CC00F6D498 /* UIViewExtension.swift */,
+				3A8238C01D91276700BFCFC9 /* WorkoutTableViewCell.swift */,
 				3A753C731DAF7CEB00E50937 /* MessagesRowCell.swift */,
 			);
 			name = CustomViews;
@@ -604,6 +607,7 @@
 			files = (
 				3A753C721DAE696F00E50937 /* MessengerViewController.swift in Sources */,
 				3A753C741DAF7CEB00E50937 /* MessagesRowCell.swift in Sources */,
+				3A753C781DB0990D00E50937 /* EventDetailsViewController.swift in Sources */,
 				3A356F351D87D28B008F85C7 /* LoginViewController.swift in Sources */,
 				3A9B8AEB1D95406200F6D498 /* workoutCustomView.swift in Sources */,
 				3A9B8AEF1D9546CC00F6D498 /* UIViewExtension.swift in Sources */,
@@ -701,7 +705,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vishal Rai (QZNZDCDCM2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vishal Rai (QZNZDCDCM2)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -748,7 +753,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vishal Rai (QZNZDCDCM2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vishal Rai (QZNZDCDCM2)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -784,7 +790,7 @@
 				INFOPLIST_FILE = TRNear_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.acellere.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.acellere.trnear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TRNear-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -807,7 +813,7 @@
 				INFOPLIST_FILE = TRNear_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.acellere.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.acellere.trnear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TRNear-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

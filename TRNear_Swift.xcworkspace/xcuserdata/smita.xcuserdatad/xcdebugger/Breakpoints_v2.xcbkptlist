@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TRNear_Swift/GlobalVariables.swift"
-            timestampString = "497535863.831513"
+            timestampString = "498139229.839931"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "postData(_:parameters:completionHandler:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,13 +42,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TRNear_Swift/TraineeCalenderViewController.swift"
-            timestampString = "497967919.76547"
+            timestampString = "498139229.839931"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "calendar(_:didScrollToDateSegmentStartingWithdate:endingWithDate:)"
-            landmarkType = "5">
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "TraineeCalenderViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TRNear_Swift.TraineeCalenderViewController.calendar (JTAppleCalendar.JTAppleCalendarView, didScrollToDateSegmentStartingWithdate : __ObjC.NSDate, endingWithDate : __ObjC.NSDate) -&gt; ()"
+                  moduleName = "TRNear_Swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smita/Acellere/Projects/trnear/TRNear_Swift/TraineeCalenderViewController.swift"
+                  timestampString = "498118035.291893"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "protocol witness for JTAppleCalendar.JTAppleCalendarViewDelegate.calendar (JTAppleCalendar.JTAppleCalendarView, didScrollToDateSegmentStartingWithdate : __ObjC.NSDate, endingWithDate : __ObjC.NSDate) -&gt; () in conformance TRNear_Swift.TraineeCalenderViewController : JTAppleCalendar.JTAppleCalendarViewDelegate in TRNear_Swift"
+                  moduleName = "TRNear_Swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smita/Acellere/Projects/trnear/TRNear_Swift/TraineeCalenderViewController.swift"
+                  timestampString = "498118035.292045"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,29 +90,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TRNear_Swift/TraineeCalenderViewController.swift"
-            timestampString = "497967919.76547"
+            timestampString = "498139229.839931"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "printSelectedDates()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TRNear_Swift/TraineeCalenderViewController.swift"
-            timestampString = "497967919.76547"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "calendar(_:didSelectDate:cell:cellState:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TRNear_Swift.TraineeCalenderViewController.calendar (JTAppleCalendar.JTAppleCalendarView, didSelectDate : __ObjC.NSDate, cell : Swift.Optional&lt;JTAppleCalendar.JTAppleDayCellView&gt;, cellState : JTAppleCalendar.CellState) -&gt; ()"
+                  moduleName = "TRNear_Swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smita/Acellere/Projects/trnear/TRNear_Swift/TraineeCalenderViewController.swift"
+                  timestampString = "498118035.293215"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "281">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "protocol witness for JTAppleCalendar.JTAppleCalendarViewDelegate.calendar (JTAppleCalendar.JTAppleCalendarView, didSelectDate : __ObjC.NSDate, cell : Swift.Optional&lt;JTAppleCalendar.JTAppleDayCellView&gt;, cellState : JTAppleCalendar.CellState) -&gt; () in conformance TRNear_Swift.TraineeCalenderViewController : JTAppleCalendar.JTAppleCalendarViewDelegate in TRNear_Swift"
+                  moduleName = "TRNear_Swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smita/Acellere/Projects/trnear/TRNear_Swift/TraineeCalenderViewController.swift"
+                  timestampString = "498118035.293377"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "142">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,28 +138,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TRNear_Swift/TraineeCalenderViewController.swift"
-            timestampString = "497967919.76547"
+            timestampString = "498139229.839931"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "calendar(_:sectionHeaderIdentifierForDate:belongingTo:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TRNear_Swift.TraineeCalenderViewController.calendar (JTAppleCalendar.JTAppleCalendarView, sectionHeaderIdentifierForDate : (start : __ObjC.NSDate, end : __ObjC.NSDate), belongingTo : Swift.Int) -&gt; Swift.String"
+                  moduleName = "TRNear_Swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smita/Acellere/Projects/trnear/TRNear_Swift/TraineeCalenderViewController.swift"
+                  timestampString = "498118035.294235"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "45">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "protocol witness for JTAppleCalendar.JTAppleCalendarViewDelegate.calendar (JTAppleCalendar.JTAppleCalendarView, sectionHeaderIdentifierForDate : (start : __ObjC.NSDate, end : __ObjC.NSDate), belongingTo : Swift.Int) -&gt; Swift.String in conformance TRNear_Swift.TraineeCalenderViewController : JTAppleCalendar.JTAppleCalendarViewDelegate in TRNear_Swift"
+                  moduleName = "TRNear_Swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smita/Acellere/Projects/trnear/TRNear_Swift/TraineeCalenderViewController.swift"
+                  timestampString = "498118035.294388"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TRNear_Swift/CalenderCellView.swift"
-            timestampString = "497968757.543728"
+            timestampString = "498138387.406396"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "awakeFromNib()"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "configureTextColor(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

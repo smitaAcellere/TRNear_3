@@ -19,15 +19,6 @@ class CalenderCellView: JTAppleDayCellView {
     let textDeselectedColor = UIColor.blackColor()
     let previousMonthTextColor = UIColor.grayColor()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        
-        self.layer.cornerRadius = self.frame.width/4
-        self.layer.borderColor = UIColor.clearColor().CGColor
-        
-    }
-    
     lazy var todayDate : String = {
         [weak self] in
         let aString = self!.c.stringFromDate(NSDate())
@@ -40,7 +31,7 @@ class CalenderCellView: JTAppleDayCellView {
         return f
     }()
     
-    func setupCellBeforeDisplay(cellState: CellState, date: NSDate) {
+    func setupCellBeforeDisplay(cellState: CellState, date: NSDate, eventDateArray: [AnyObject]) {
         // Setup Cell text
         dayLabel.text =  cellState.text
         
@@ -49,6 +40,22 @@ class CalenderCellView: JTAppleDayCellView {
         
         // Setup Cell Background color
         self.backgroundColor = c.stringFromDate(date) == todayDate ? todayColor:normalDayColor
+                
+        for eventDate in eventDateArray {
+            
+            if date.equalToDate(c.dateFromString(eventDate as! String)!) {
+                
+                if c.dateFromString(eventDate as! String)!.isGreaterThanDate(c.dateFromString(todayDate)!) {
+                    self.backgroundColor = GlobalVariables.Colors.cell_dark
+                    dayLabel.textColor = textSelectedColor
+                }else{
+                    self.backgroundColor = GlobalVariables.Colors.cell_light
+                }
+            }
+        }
+        
+        self.layer.borderColor = UIColor.clearColor().CGColor
+        self.layer.cornerRadius =  self.frame.width/2
         
         // Setup cell selection status
         delayRunOnMainThread(0.0) {
@@ -74,9 +81,9 @@ class CalenderCellView: JTAppleDayCellView {
     func configureTextColor(cellState: CellState) {
         if cellState.isSelected {
             dayLabel.textColor = textSelectedColor
-        } else if cellState.dateBelongsTo == .ThisMonth {
+        }else if cellState.dateBelongsTo == .ThisMonth {
             dayLabel.textColor = textDeselectedColor
-        } else {
+        }else {
             dayLabel.textColor = previousMonthTextColor
         }
     }

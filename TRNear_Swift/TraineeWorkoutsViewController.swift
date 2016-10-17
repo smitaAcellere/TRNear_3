@@ -159,8 +159,8 @@ class TraineeWorkoutsViewController: UIViewController,UITableViewDelegate,UITabl
             
         }else{
         
-            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("workoutDetailsVC") as! WorkoutDetailsViewController
-            self.navigationController?.pushViewController(viewController, animated:true)
+//            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("workoutDetailsVC") as! WorkoutDetailsViewController
+//            self.navigationController?.pushViewController(viewController, animated:true)
         }
     }
 

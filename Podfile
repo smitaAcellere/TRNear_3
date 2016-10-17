@@ -29,8 +29,9 @@ target 'TRNear_Swift' do
 
     pod ‘JTAppleCalendar’
 
+    pod 'TKKeyboardControl'
 
-	pod 'SkyFloatingLabelTextField', '~> 1.0'
+    pod 'SkyFloatingLabelTextField', '~> 1.0'
 pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git', :branch => 'swift2.3'
 
 post_install do |installer|

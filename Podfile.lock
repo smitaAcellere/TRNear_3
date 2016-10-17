@@ -74,6 +74,7 @@ PODS:
   - JTAppleCalendar (5.0.1)
   - NVActivityIndicatorView (2.12)
   - SkyFloatingLabelTextField (1.2.1)
+  - TKKeyboardControl (1.0.6)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -85,6 +86,7 @@ DEPENDENCIES:
   - JTAppleCalendar
   - NVActivityIndicatorView (from `https://github.com/ninjaprox/NVActivityIndicatorView.git`, branch `swift2.3`)
   - SkyFloatingLabelTextField (~> 1.0)
+  - TKKeyboardControl
 
 EXTERNAL SOURCES:
   NVActivityIndicatorView:
@@ -119,7 +121,8 @@ SPEC CHECKSUMS:
   JTAppleCalendar: cb2417b1f3367d1993e31720a663646742139a5c
   NVActivityIndicatorView: de8be03826726ad99cdfacf7fe09e88cbfeef911
   SkyFloatingLabelTextField: 3f6610aded18e778df5cfab3b9e12a11b3e014e9
+  TKKeyboardControl: a3ad5d222197ba7b3fc98d4a670ca545e5d16676
 
-PODFILE CHECKSUM: 0762e3226df9a089dcbf0d8e33b3a6e92a22deef
+PODFILE CHECKSUM: b81a8433cc134964e5ed18659b3a39ddeeba4ebd
 
 COCOAPODS: 1.1.0.rc.2
